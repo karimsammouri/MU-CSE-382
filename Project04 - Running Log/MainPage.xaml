@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RunningApp.MainPage">
+    <TabbedPage.SelectedTabColor>White</TabbedPage.SelectedTabColor>
+    <TabbedPage.BarBackgroundColor>DarkSlateBlue</TabbedPage.BarBackgroundColor>
+    <TabbedPage.UnselectedTabColor>Silver</TabbedPage.UnselectedTabColor>
+
+    <ContentPage Title="Activities" Padding="0,60,0,0" BackgroundColor="GhostWhite">
+        <StackLayout>
+            <DatePicker x:Name="datePicker" Margin="10,10,10,10"/>
+            <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
+                <Label x:Name="distanceLabel" Text="Distance (Miles): "/>
+                <Entry x:Name="distanceEntry" WidthRequest="50"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
+                <Label Text="Time (Hours and Minutes): "/>
+                <Entry x:Name="timeEntry1" WidthRequest="35"/>
+                <Label Text=":"/>
+                <Entry x:Name="timeEntry2" WidthRequest="35"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
+                <Label Text="Average Heart Rate: "/>
+                <Entry x:Name="rateEntry" WidthRequest="50"/>
+            </StackLayout>
+            <ListView x:Name="databaseView"/>
+            <Button x:Name="addButton" Text="ADD" Clicked="addButton_Clicked" BackgroundColor="Lavender"/>
+            <Button x:Name="updateButton" Text="UPDATE" Clicked="updateButton_Clicked" BackgroundColor="Lavender"/>
+            <Button x:Name="deleteButton" Text="DELETE" Clicked="deleteButton_Clicked" BackgroundColor="Lavender"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Total" Padding="0,60,0,0" BackgroundColor="GhostWhite">
+        <StackLayout>
+            <ListView x:Name="totalView"/>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Settings" Padding="0,60,0,0">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
+                <Label Text="Gender"/>
+                <Picker x:Name="genderPicker" WidthRequest="100" SelectedItem="Male"
+                        SelectedIndexChanged="genderPicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
+                <Label Text="DOB"/>
+                <DatePicker x:Name="birthDatePicker" Date="1/1/2000" WidthRequest="100"
+                            DateSelected="birthDatePicker_DateSelected"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
+                <Label Text="Miles"/>
+                <Switch x:Name="metricSwitch" Toggled="metricSwitch_Toggled"/>
+                <Label Text="Kilometers"/>
+            </StackLayout>
+            <Button x:Name="creditsButton" Text="CREDITS" Clicked="creditsButton_Clicked"/>
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>
+
