@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FormulaStandings.DriverPage">
+    <NavigationPage.HasNavigationBar>True</NavigationPage.HasNavigationBar>
+    <ContentPage.Title>Driver Information</ContentPage.Title>
+    <NavigationPage.IconColor>Red</NavigationPage.IconColor>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Frame Padding="0,15,0,15" CornerRadius="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label x:Name="name" FontSize="23" FontAttributes="Bold"/>
+                    <Image x:Name="flag" HeightRequest="18" Margin="3,0,0,0"/>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="0,10,0,0" HasShadow="False">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Image x:Name="constructor" HeightRequest="90" HorizontalOptions="Start"/>
+                    <Image x:Name="driverShot" HeightRequest="130" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <ActivityIndicator x:Name="loading" IsRunning="True" IsVisible="True" Margin="0,20,0,20"/>
+            <ListView x:Name="driver" RowHeight="545" BackgroundColor="WhiteSmoke" VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Frame Margin="25,25,25,0" Padding="25,25,25,25" HasShadow="False" CornerRadius="30">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" Padding="10,0,0,0">
+                                            <Label Text="Code" FontAttributes="Bold"/>
+                                            <Label Text="Number" FontAttributes="Bold"/>
+                                            <Label Text="Constructor" FontAttributes="Bold"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1">
+                                            <Label Text="{Binding code}" TextColor="DarkSlateGray"/>
+                                            <Label Text="{Binding permanentNumber}" TextColor="DarkSlateGray"/>
+                                            <Label Text="{Binding constructor}" TextColor="DarkSlateGray"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                                <Frame Margin="25,25,25,0" Padding="25,25,25,25" HasShadow="False" CornerRadius="30">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" Padding="10,0,0,0">
+                                            <Label Text="Season Rank" FontAttributes="Bold"/>
+                                            <Label Text="Season Wins" FontAttributes="Bold"/>
+                                            <Label Text="Season Points" FontAttributes="Bold"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1">
+                                            <Label Text="{Binding position}" TextColor="DarkSlateGray"/>
+                                            <Label Text="{Binding wins}" TextColor="DarkSlateGray"/>
+                                            <Label Text="{Binding points}" TextColor="DarkSlateGray"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                                <Frame Margin="25,25,25,0" Padding="25,25,25,25" HasShadow="False" CornerRadius="30">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" Padding="10,0,0,0">
+                                            <Label Text="Nationality" FontAttributes="Bold"/>
+                                            <Label Text="Date of Birth" FontAttributes="Bold"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1">
+                                            <Label Text="{Binding nationality}" TextColor="DarkSlateGray"/>
+                                            <Label Text="{Binding dateOfBirth}" TextColor="DarkSlateGray"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                                <Button Text="Learn More" Margin="0,5,0,0" HorizontalOptions="Center" Clicked="MoreInfoTapped"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

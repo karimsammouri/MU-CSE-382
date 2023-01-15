@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FormulaStandings.AboutPage">
+    <NavigationPage.HasNavigationBar>True</NavigationPage.HasNavigationBar>
+    <ContentPage.Title>About</ContentPage.Title>
+    <NavigationPage.IconColor>Red</NavigationPage.IconColor>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="WhiteSmoke">
+                <Label Margin="50,35,50,35" LineHeight="1.5" TextColor="DimGray">
+                    Formula One™ Standings was built using Microsoft's Xamarin.Forms framework, XAML, and C#. It calls on the Ergast Developer API for Formula One™ race, driver, and constructor data. Abiding by the terms and conditions of the Ergast web service, this project is intended for personal, non-commercial purposes. It fulfills the final project requirements of the course CSE 382 (Mobile Application Development) for the Fall of 2022 at Miami University in Oxford, OH. The project, excluding the Ergast web service, is wholly designed and implemented by the student developer Karim Sammouri (Miami University '23) with all rights reserved.
+                </Label>
+                <Label Margin="0,0,0,30" VerticalOptions="EndAndExpand" Text="Version 3.0" HorizontalOptions="Center" TextColor="DimGray" FontSize="15"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FormulaStandings.RacePage">
+    <NavigationPage.HasNavigationBar>True</NavigationPage.HasNavigationBar>
+    <ContentPage.Title>Race Result</ContentPage.Title>
+    <NavigationPage.IconColor>Red</NavigationPage.IconColor>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Frame Padding="0,15,0,15" CornerRadius="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label x:Name="raceName" FontSize="23" FontAttributes="Bold"/>
+                    <Image x:Name="flag" HeightRequest="18" Margin="3,0,0,0"/>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="60,20,60,20" HasShadow="False">
+                <Image x:Name="circuit" HeightRequest="150"/>
+            </Frame>
+            <ActivityIndicator x:Name="loading" IsRunning="True" IsVisible="True" Margin="0,20,0,20"/>
+            <ListView x:Name="race" ItemTapped="DriverTapped" Margin="0,0,0,10" RowHeight="100" BackgroundColor="WhiteSmoke">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="10,5,10,5" Padding="5,0,5,0" HasShadow="False" CornerRadius="30">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="65"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Label Text="POS" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                        <Frame Padding="10,5,10,5" HasShadow="False" BackgroundColor="LightGray" CornerRadius="15" HorizontalOptions="Center">
+                                            <Label Text="{Binding position}" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                        </Frame>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1" VerticalOptions="Center" Orientation="Horizontal">
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="{Binding constructor}" FontSize="15" TextColor="Red" FontAttributes="Bold"/>
+                                                <Frame Margin="3,0,0,0" Padding="5,1,5,1" HasShadow="False" BackgroundColor="Red" CornerRadius="5">
+                                                    <Label Text="{Binding points, StringFormat='+{0} pts'}" FontSize="15" TextColor="White" FontAttributes="Bold"/>
+                                                </Frame>
+                                            </StackLayout>
+                                            <Label Text="{Binding driver}" FontAttributes="Bold" FontSize="21" TextColor="Black"/>
+                                            <Label Text="{Binding time}" FontAttributes="Bold" FontSize="15" TextColor="DarkSlateGray"/>
+                                        </StackLayout>
+                                        <Image Source="{Binding driver}" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="75" Margin="0,0,10,0"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:FormulaStandings;assembly=FormulaStandings"
+             mc:Ignorable="d"
+             x:Class="FormulaStandings.MainPage"
+            Title="Formula One™ Standings">
+    <TabbedPage.BarBackgroundColor>White</TabbedPage.BarBackgroundColor>
+    <TabbedPage.SelectedTabColor>Red</TabbedPage.SelectedTabColor>
+    <TabbedPage.UnselectedTabColor>Silver</TabbedPage.UnselectedTabColor>
+
+    <ContentPage Title="Races" IconImageSource="Races.svg">
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Frame Padding="0,15,0,15" CornerRadius="0">
+                <Label Text="Race Schedule" HorizontalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+            </Frame>
+            <ActivityIndicator x:Name="loading" IsRunning="True" IsVisible="True" Margin="0,20,0,20"/>
+            <ListView x:Name="races" Margin="0,0,0,5" ItemTapped="RaceTapped" RowHeight="100" BackgroundColor="WhiteSmoke">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="10,5,10,5" Padding="5,0,5,0" HasShadow="False" CornerRadius="30">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="75"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Label Text="{Binding dateDay}" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                        <Frame Padding="10,5,10,5" HasShadow="False" BackgroundColor="LightGray" CornerRadius="15">
+                                            <Label Text="{Binding dateMonth}" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                        </Frame>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                        <Label Text="{Binding round, StringFormat='Round {0}'}" FontSize="15" FontAttributes="Bold" TextColor="Red"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding country}" FontAttributes="Bold" FontSize="21" TextColor="Black"/>
+                                            <Image Source="{Binding country}" HeightRequest="18" Margin="3,0,0,0"/>
+                                            <Label Text="Result >   " HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="15" VerticalOptions="Center" TextColor="Red"/>
+                                        </StackLayout>
+                                        <Label Text="{Binding circuit}" FontAttributes="Bold" FontSize="15" TextColor="DarkSlateGray"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+
+    <CarouselPage Title="Standings" IconImageSource="Standings.svg" BackgroundColor="WhiteSmoke">
+        <ContentPage BackgroundColor="WhiteSmoke">
+            <StackLayout BackgroundColor="WhiteSmoke">
+                <Frame Padding="0,15,0,15" Margin="0,0,7,0" CornerRadius="0">
+                    <Label Text="Driver Standings" HorizontalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+                <ActivityIndicator x:Name="loading2" IsRunning="True" IsVisible="True" Margin="0,20,0,20"/>
+                <ListView x:Name="drivers" Margin="0,0,0,5" ItemTapped="DriverTapped" RowHeight="100" BackgroundColor="WhiteSmoke">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Margin="10,5,10,5" Padding="5,0,5,0" HasShadow="False" CornerRadius="30">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="65"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label Text="POS" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                            <Frame Padding="10,5,10,5" HasShadow="False" BackgroundColor="LightGray" CornerRadius="15" HorizontalOptions="Center">
+                                                <Label Text="{Binding position}" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                            </Frame>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1" VerticalOptions="Center" Orientation="Horizontal">
+                                            <StackLayout>
+                                                <Label Text="{Binding points, StringFormat='{0} points'}" FontSize="15" FontAttributes="Bold" TextColor="Red"/>
+                                                <Label Text="{Binding name}" FontAttributes="Bold" FontSize="21" TextColor="Black"/>
+                                                <Label Text="{Binding constructor}" FontAttributes="Bold" FontSize="15" TextColor="DarkSlateGray"/>
+                                            </StackLayout>
+                                            <Image Source="{Binding name}" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="75" Margin="0,0,10,0"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+        <ContentPage BackgroundColor="WhiteSmoke">
+            <StackLayout BackgroundColor="WhiteSmoke">
+                <Frame Padding="0,15,0,15" Margin="7,0,0,0" CornerRadius="0">
+                    <Label Text="Constructor Standings" HorizontalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+                <ActivityIndicator x:Name="loading3" IsRunning="True" IsVisible="True" Margin="0,20,0,20"/>
+                <ListView x:Name="constructors" Margin="0,0,0,5" ItemTapped="ConstructorTapped" RowHeight="100" BackgroundColor="WhiteSmoke">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Margin="10,5,10,5" Padding="5,0,5,0" HasShadow="False" CornerRadius="30">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="65"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label Text="POS" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                            <Frame Padding="10,5,10,5" HasShadow="False" BackgroundColor="LightGray" CornerRadius="15">
+                                                <Label Text="{Binding position}" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkSlateGray" FontSize="15"/>
+                                            </Frame>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1" VerticalOptions="Center" Orientation="Horizontal">
+                                            <StackLayout>
+                                                <Label Text="{Binding points, StringFormat='{0} points'}" FontSize="15" FontAttributes="Bold" TextColor="Red"/>
+                                                <Label Text="{Binding name}" FontAttributes="Bold" FontSize="21" TextColor="Black"/>
+                                                <Label Text="{Binding wins, StringFormat='{0} race wins'}" FontAttributes="Bold" FontSize="15" TextColor="DarkSlateGray"/>
+                                            </StackLayout>
+                                            <Image Source="{Binding name}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" HeightRequest="65" Margin="0,0,10,0"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </CarouselPage>
+
+    <ContentPage Title="News" IconImageSource="News.svg">
+        <StackLayout>
+            <WebView Source="https://www.formula1.com/en/latest/all.html"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="More" IconImageSource="More.svg">
+        <ScrollView>
+            <StackLayout BackgroundColor="WhiteSmoke">
+                <Frame BackgroundColor="White" CornerRadius="0">
+                    <Image Source="Logo.png"/>
+                </Frame>
+                <Frame Margin="20,25,20,0" Padding="25,25,25,25" HasShadow="False" CornerRadius="30">
+                    <StackLayout>
+                        <Label Text="Settings" FontAttributes="Bold" HorizontalOptions="Center" FontSize="20" TextColor="Black" Margin="0,0,0,5"/>
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="Music" VerticalOptions="Center" TextColor="DarkSlateGray"/>
+                            <Switch x:Name="musicSwitch" Toggled="MusicSwitchToggled" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10,10,10,0">
+                            <Label Text="Volume" VerticalOptions="Center" TextColor="DarkSlateGray"/>
+                            <Stepper x:Name="volumeStepper" Minimum="0" Maximum="1" Increment="0.1" ValueChanged="VolumeStepperClicked" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="20,20,20,0" Padding="25,25,25,25" HasShadow="False" CornerRadius="30">
+                    <StackLayout>
+                        <Label Text="Support" FontAttributes="Bold" HorizontalOptions="Center" FontSize="20" TextColor="Black" Margin="0,0,0,5"/>
+                        <Button Text="About" HorizontalOptions="Start" Padding="10,0,10,0" HeightRequest="25" Clicked="AboutTapped"/>
+                        <Button Text="Feedback" HorizontalOptions="Start" Padding="10,0,10,0" HeightRequest="25" Clicked="FeedbackTapped"/>
+                        <Button Text="Official F1™ Site" HorizontalOptions="Start" Padding="10,0,10,0" HeightRequest="25" Clicked="F1SiteTapped"/>
+                    </StackLayout>
+                </Frame>
+                <Label Margin="0,15,0,0" Text="Version 3.0" HorizontalOptions="Center" TextColor="DimGray" FontSize="15"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>
+
