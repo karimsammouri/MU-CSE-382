@@ -1,0 +1,6 @@
+﻿Swimming,0:50:00
+Biking,2:00:00
+Running,1:00:00
+Walking,1:30:00
+Yoga,0:45:00
+Strength Training,1:00:00

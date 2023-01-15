@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TrainingDB.RetrievalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sport"/>
+                <Picker x:Name="sport" SelectedIndexChanged="SportSelected" WidthRequest="300">
+                    <Picker.Items>
+                        <x:String>Swimming</x:String>
+                        <x:String>Biking</x:String>
+                        <x:String>Running</x:String>
+                        <x:String>Walking</x:String>
+                        <x:String>Yoga</x:String>
+                        <x:String>Strength Training</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedIndex>1</Picker.SelectedIndex>
+                </Picker>
+            </StackLayout>
+            <ListView x:Name="lvActivities">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding DatePerformed, StringFormat='{0:MM/dd/yyyy}'}"/>
+                                <Label Text="{Binding Duration, StringFormat='{0}'}" TextColor="Red"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content></ContentPage>

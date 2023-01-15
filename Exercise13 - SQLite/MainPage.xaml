@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DBIntro.MainPage">
+
+    <StackLayout Padding="0,20,0,0">
+        <Button Text="Add user" Clicked="Button_Clicked"/>
+        <Entry x:Name="name"/>
+        <ListView x:Name="lv"/>
+
+        <Entry x:Name="name2" Text="Name"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="DOB"/>
+            <DatePicker x:Name="dob" WidthRequest="100"></DatePicker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="SSN"/>
+            <Entry x:Name="ssn" WidthRequest="100"/>
+        </StackLayout>
+        <Button Text="Add Person" Clicked="Button_Clicked_2"/>
+        <ListView x:Name="lv2"/>
+    </StackLayout>
+
+</ContentPage>
+

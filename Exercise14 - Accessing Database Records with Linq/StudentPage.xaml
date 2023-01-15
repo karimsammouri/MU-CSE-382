@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DBSetup.StudentPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView HeightRequest="800">
+                <StackLayout>
+                    <Button Text="Q1" Clicked="OnQueryClicked"/>
+                    <Button Text="Q2" Clicked="OnQueryClicked"/>
+                    <Button Text="Q3" Clicked="OnQueryClicked"/>
+                    <Button Text="Q4" Clicked="OnQueryClicked"/>
+                    <Button Text="Q5" Clicked="OnQueryClicked"/>
+                    <Button Text="Q6" Clicked="OnQueryClicked"/>
+                    <Button Text="Q7" Clicked="OnQueryClicked"/>
+                    <Button Text="Q8" Clicked="OnQueryClicked"/>
+                    <Button Text="Q9" Clicked="OnQueryClicked"/>
+                    <Button Text="Q10" Clicked="OnQueryClicked"/>
+                </StackLayout>
+            </ScrollView>
+            <ListView x:Name="lv" HeightRequest="400"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

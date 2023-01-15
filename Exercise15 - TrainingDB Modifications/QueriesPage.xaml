@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TrainingDB.QueriesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="HrRunAll" Text="1hr Runs" Clicked="OnClicked"/>
+            <Button x:Name="HrRunDates" Text="1hr Run (Dates Only)" Clicked="OnClicked"/>
+            <Button x:Name="HrRunDateDuration" Text="1hr (Dates and Duration)" Clicked="OnClicked"/>
+            <Button x:Name="LRunAll" Text="Long Run" Clicked="OnClicked"/>
+            <Button x:Name="Calories" Text="500+ Calories" Clicked="OnClicked"/>
+            <ListView x:Name="lv" HeightRequest="300"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

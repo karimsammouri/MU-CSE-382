@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TrainingDB.ActivityPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <DatePicker x:Name="date"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sport"/>
+                <Picker x:Name="sport">
+                    <Picker.Items>
+                        <x:String>Swimming</x:String>
+                        <x:String>Biking</x:String>
+                        <x:String>Running</x:String>
+                        <x:String>Walking</x:String>
+                        <x:String>Yoga</x:String>
+                        <x:String>Strength Training</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedIndex>1</Picker.SelectedIndex>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Hours"/>
+                <Picker x:Name="hours"/>
+                <Label Text="Minutes"/>
+                <Picker x:Name="minutes"/>
+            </StackLayout>
+            <ListView x:Name="lvActivities" ItemSelected="ItemSelected"/>
+            <Button Text="Add Activity" Clicked="AddClicked"/>
+            <Button Text="Update Activity" Clicked="UpdateClicked"/>
+            <Button Text="Delete Activity" Clicked="DeleteClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
