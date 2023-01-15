@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FirstXAML.MyXAMLPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Enter a Phoneword:" FontSize="Large"/>
+            <Entry Text="1-855-XAMARIN"/>
+            <Button Text="Translate"/>
+            <Button Text="Call" IsEnabled="False"/>
+            <Slider Value="0.75"/>
+            <Stepper/>
+            <StackLayout Orientation="Horizontal">
+                <CheckBox IsChecked="True"/>
+                <Label Text="Adult"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Switch IsToggled="True"/>
+                <Label Text="Bluetooth"/>
+            </StackLayout>
+            <Editor Text="This is multi-line text. &#x0a;This is a control called an Editor"/>
+            <StackLayout Orientation="Horizontal">
+                <DatePicker/>
+                <TimePicker/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="DarkRed"></BoxView>
+                <BoxView Color="IndianRed"></BoxView>
+                <BoxView Color="MediumVioletRed"></BoxView>
+                <BoxView Color="OrangeRed"></BoxView>
+                <BoxView Color="PaleVioletRed"></BoxView>
+                <BoxView Color="Red"></BoxView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
