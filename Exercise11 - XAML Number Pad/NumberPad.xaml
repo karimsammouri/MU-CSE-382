@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XAML.NumberPad">
+
+    <Page.Resources>
+            <ResourceDictionary>
+                <Style x:Key="MyButtonStyle" TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="CornerRadius" Value="5"/>
+                    <Setter Property="FontSize" Value="10"/>
+                    <Setter Property="HorizontalOptions" Value="Center"/>
+                    <Setter Property="HeightRequest" Value="20"/>
+                    <Setter Property="WidthRequest" Value="200"/>
+                </Style>
+            </ResourceDictionary>
+    </Page.Resources>
+
+    <ContentPage.Content>
+
+        <StackLayout Padding="0, 20, 0, 0">
+            <Label x:Name="cLabel" Text="0" HorizontalTextAlignment="Center" FontSize="20"/>
+            <Button Text="0" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="1" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="2" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="3" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="4" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="5" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="6" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="7" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="8" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="9" Clicked="Button_Clicked" Style="{StaticResource MyButtonStyle}"/>
+            <Button Text="Clear" Clicked="Clear_Clicked" Style="{StaticResource MyButtonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
