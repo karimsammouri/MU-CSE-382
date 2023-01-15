@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bindings.OneWayToSource">
+    <Grid Margin="0,40,0,40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Scaled and rotated Label -->
+        <Label x:Name="label"
+               Text="TEXT"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               />
+        <Label BindingContext="{x:Reference scaleSlider}"
+               Text="{Binding Value, StringFormat='{0:F0}'}"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="0" Grid.Column="1"
+               />
+
+        <!-- Slider and identifying Label for Scale -->
+        <Slider x:Name="scaleSlider"
+                BindingContext="{x:Reference label}"
+                Grid.Row="1" Grid.Column="0"
+                Maximum="10"
+                Value="{Binding Scale, Mode=OneWayToSource}" />
+
+        <Label BindingContext="{x:Reference scaleSlider}"
+               Text="{Binding Value, StringFormat='Scale = {0:F1}'}"
+               Grid.Row="1" Grid.Column="1"
+               VerticalTextAlignment="Center" />
+
+        <!-- Slider and identifying Label for Rotation -->
+        <Slider x:Name="rotationSlider"
+                BindingContext="{x:Reference label}"
+                Grid.Row="2" Grid.Column="0"
+                Maximum="360"
+                Value="{Binding Rotation, Mode=OneWayToSource}" />
+
+        <Label BindingContext="{x:Reference rotationSlider}"
+               Text="{Binding Value, StringFormat='Rotation = {0:F0}'}"
+               Grid.Row="2" Grid.Column="1"
+               VerticalTextAlignment="Center" />
+    </Grid>
+</ContentPage>

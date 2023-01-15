@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MVVM;assembly=MVVM"
+             x:Class="MVVM.MainPage">
+
+    <local:ClockPage Title="Clock"/>
+    <local:SimpleMultiplierPage Title="Multiply"/>
+    <local:PowersOfThreePage Title="3^x"/>
+    <local:HslSlidersPage Title="HSL"/>
+    <local:AddingMachinePage Title="Calc"/>
+</TabbedPage>

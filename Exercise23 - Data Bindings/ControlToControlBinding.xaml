@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bindings.ControlToControlBinding">
+    <StackLayout Margin="0,40,0,40">
+        <Frame BorderColor="Red">
+            <StackLayout>
+                <Picker x:Name="picker">
+                    <Picker.Items>
+                        <x:String>A</x:String>
+                        <x:String>B</x:String>
+                        <x:String>C</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label BindingContext="{Reference picker}"
+                   Text="{Binding SelectedItem}" />
+                <Label BindingContext="{Reference picker}"
+                   Text="{Binding SelectedIndex}" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Red">
+            <StackLayout>
+                <Label Text="ROTATION"
+                   BindingContext="{Reference Name=slider}"
+                   Rotation="{Binding Path=Value}"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+                <Slider x:Name="slider"
+                    Maximum="360"
+                    VerticalOptions="CenterAndExpand" />
+                <Label BindingContext="{Reference slider}"
+                   Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Red">
+            <StackLayout>
+                <Label BindingContext="{Reference anEntry}" Text="{Binding Text}"/>
+                <Label BindingContext="{Reference anEntry}" Text="{Binding Text.Length, StringFormat='{0}'}"/>
+                <Entry x:Name="anEntry"/>
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Red">
+            <StackLayout>
+                <Label Text="{Binding Source={Reference rotationSlider}, Path=Value}"
+                   Rotation="{Binding Source={Reference rotationSlider}, Path=Value}"
+                   RotationX="{Binding Source={Reference rotationXSlider}, Path=Value}"
+                   RotationY="{Binding Source={Reference rotationYSlider}, Path=Value}"/>
+                <Slider x:Name="rotationSlider" Maximum="360" Value="180"/>
+                <Slider x:Name="rotationXSlider" Maximum="360" Value="180"/>
+                <Slider x:Name="rotationYSlider" Maximum="360" Value="180"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

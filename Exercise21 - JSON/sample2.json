@@ -1,0 +1,211 @@
+﻿{
+  "results": [
+    {
+      "vegetarian": true,
+      "vegan": true,
+      "glutenFree": true,
+      "dairyFree": true,
+      "veryHealthy": true,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "weightWatcherSmartPoints": 12,
+      "gaps": "no",
+      "lowFodmap": false,
+      "aggregateLikes": 3,
+      "spoonacularScore": 94.0,
+      "healthScore": 100.0,
+      "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+      "license": "CC BY 3.0",
+      "sourceName": "Foodista",
+      "pricePerServing": 252.69,
+      "id": 646043,
+      "title": "Gujarati Dry Mung Bean Curry",
+      "readyInMinutes": 45,
+      "servings": 4,
+      "sourceUrl": "http://www.foodista.com/recipe/G6ZJW56S/gujarati-dry-mung-bean-curry",
+      "image": "https://spoonacular.com/recipeImages/646043-312x231.jpg",
+      "imageType": "jpg",
+      "summary": "The recipe Gujarati Dry Mung Bean Curry is ready <b>in around 45 minutes</b> and is definitely an excellent <b>gluten free and vegan</b> option for lovers of Indian food. For <b>$2.53 per serving</b>, this recipe <b>covers 45%</b> of your daily requirements of vitamins and minerals. This recipe makes 4 servings with <b>417 calories</b>, <b>23g of protein</b>, and <b>6g of fat</b> each. This recipe from Foodista has 2 fans. It works well as an affordable main course. A mixture of salt, sugar, cinnamon powder, and a handful of other ingredients are all it takes to make this recipe so flavorful. To use up the cumin seeds you could follow this main course with the <a href=\"https://spoonacular.com/recipes/indian-fried-banana-cakes-mangalore-buns-899949\">Indian Fried Banana Cakes (Mangalore Buns)</a> as a dessert. All things considered, we decided this recipe <b>deserves a spoonacular score of 94%</b>. This score is amazing. Try <a href=\"https://spoonacular.com/recipes/uncle-bills-mung-bean-curry-113139\">Uncle Bill's Mung Bean Curry</a>, <a href=\"https://spoonacular.com/recipes/mung-bean-crepes-34435\">Mung Bean Crepes</a>, and <a href=\"https://spoonacular.com/recipes/korean-mung-with-bean-34423\">Korean Mung With Bean</a> for similar recipes.",
+      "cuisines": [ "Indian", "Asian" ],
+      "dishTypes": [ "lunch", "main course", "main dish", "dinner" ],
+      "diets": [ "gluten free", "dairy free", "lacto ovo vegetarian", "vegan" ],
+      "occasions": [],
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "Wash the mung beans and boil them in plenty of hot water with a pinch of baking powder until al-dente. If you have a pressure cooker thats about 6-7 whistles.",
+              "ingredients": [
+                {
+                  "id": 18369,
+                  "name": "baking powder",
+                  "localizedName": "baking powder",
+                  "image": "white-powder.jpg"
+                },
+                {
+                  "id": 16080,
+                  "name": "mung beans",
+                  "localizedName": "mung beans",
+                  "image": "mung-beans.png"
+                },
+                {
+                  "id": 14412,
+                  "name": "water",
+                  "localizedName": "water",
+                  "image": "water.png"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404658,
+                  "name": "pressure cooker",
+                  "localizedName": "pressure cooker",
+                  "image": "pressure-cooker.jpg"
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "step": "Drain and set aside.In a large pan heat the oil and add the mustard seeds (wait for them to pop) then add the cumin seeds, asafoetida, curry leaves, garlic and chillies. Saut until aromatic. Obviously dont let it burn.",
+              "ingredients": [
+                {
+                  "id": 2024,
+                  "name": "mustard seeds",
+                  "localizedName": "mustard seeds",
+                  "image": "mustard-seeds.png"
+                },
+                {
+                  "id": 93604,
+                  "name": "curry leaves",
+                  "localizedName": "curry leaves",
+                  "image": "curry-leaves.jpg"
+                },
+                {
+                  "id": 2014,
+                  "name": "cumin seeds",
+                  "localizedName": "cumin seeds",
+                  "image": "ground-cumin.jpg"
+                },
+                {
+                  "id": 1032035,
+                  "name": "asafoetida",
+                  "localizedName": "asafoetida",
+                  "image": "curry-powder.jpg"
+                },
+                {
+                  "id": 11819,
+                  "name": "chili pepper",
+                  "localizedName": "chili pepper",
+                  "image": "red-chili.jpg"
+                },
+                {
+                  "id": 11215,
+                  "name": "garlic",
+                  "localizedName": "garlic",
+                  "image": "garlic.png"
+                },
+                {
+                  "id": 4582,
+                  "name": "cooking oil",
+                  "localizedName": "cooking oil",
+                  "image": "vegetable-oil.jpg"
+                },
+                {
+                  "id": 0,
+                  "name": "pop",
+                  "localizedName": "pop",
+                  "image": ""
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404645,
+                  "name": "frying pan",
+                  "localizedName": "frying pan",
+                  "image": "pan.png"
+                }
+              ]
+            },
+            {
+              "number": 3,
+              "step": "Add the tomatoes, turmeric and mung beans and cook for two minutes. Be careful not to mash it up as you stir.",
+              "ingredients": [
+                {
+                  "id": 16080,
+                  "name": "mung beans",
+                  "localizedName": "mung beans",
+                  "image": "mung-beans.png"
+                },
+                {
+                  "id": 11529,
+                  "name": "tomato",
+                  "localizedName": "tomato",
+                  "image": "tomato.png"
+                },
+                {
+                  "id": 2043,
+                  "name": "turmeric",
+                  "localizedName": "turmeric",
+                  "image": "turmeric.jpg"
+                }
+              ],
+              "equipment": [],
+              "length": {
+                "number": 2,
+                "unit": "minutes"
+              }
+            },
+            {
+              "number": 4,
+              "step": "Add the salt, sugar, lemon juice and cinnamon powder and cook for a further two minutes.Throw in the chopped coriander, combine and serve.",
+              "ingredients": [
+                {
+                  "id": 1012010,
+                  "name": "ground cinnamon",
+                  "localizedName": "ground cinnamon",
+                  "image": "cinnamon.jpg"
+                },
+                {
+                  "id": 9152,
+                  "name": "lemon juice",
+                  "localizedName": "lemon juice",
+                  "image": "lemon-juice.jpg"
+                },
+                {
+                  "id": 1012013,
+                  "name": "coriander",
+                  "localizedName": "coriander",
+                  "image": "ground-coriander.jpg"
+                },
+                {
+                  "id": 19335,
+                  "name": "sugar",
+                  "localizedName": "sugar",
+                  "image": "sugar-in-bowl.png"
+                },
+                {
+                  "id": 2047,
+                  "name": "salt",
+                  "localizedName": "salt",
+                  "image": "salt.jpg"
+                }
+              ],
+              "equipment": [],
+              "length": {
+                "number": 2,
+                "unit": "minutes"
+              }
+            }
+          ]
+        }
+      ],
+      "spoonacularSourceUrl": "https://spoonacular.com/gujarati-dry-mung-bean-curry-646043"
+    }
+  ],
+  "offset": 0,
+  "number": 25,
+  "totalResults": 1
+}
