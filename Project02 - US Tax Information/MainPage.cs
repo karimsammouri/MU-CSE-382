@@ -24,34 +24,50 @@ namespace USTaxes
 
         public MainPage()
         {
-            amountLabel = new Label { Text = "Average Tax Return",
-                Padding = new Thickness(10, 0, 0, 0)};
+            amountLabel = new Label
+            {
+                Text = "Average Tax Return",
+                Padding = new Thickness(5, 0, 0, 0)
+            };
             amountEntry = new Entry();
-            cityLabel = new Label { Text = "City",
-                Padding = new Thickness(10, 0, 0, 0) };
+            cityLabel = new Label
+            {
+                Text = "City",
+                Padding = new Thickness(5, 3, 0, 0)
+            };
             cityEntry = new Entry();
-            stateLabel = new Label { Text = "State",
-                Padding = new Thickness(10, 0, 0, 0) };
+            stateLabel = new Label
+            {
+                Text = "State",
+                Padding = new Thickness(5, 3, 0, 0)
+            };
             stateEntry = new Entry();
 
-            queryLabel = new Label { Text = "Query Type",
-                Padding = new Thickness(10, 0, 0, 0) };
+            queryLabel = new Label
+            {
+                Text = "Query Type",
+                Padding = new Thickness(5, 3, 0, 0)
+            };
             queryPicker = new Picker();
             List<string> pickerOptions = new List<string>();
-            pickerOptions.Add("amount");
-            pickerOptions.Add("city state");
+            pickerOptions.Add("Zip codes with equivalent return");
+            pickerOptions.Add("Zip codes in city-state");
             queryPicker.ItemsSource = pickerOptions;
 
-            button = new Button { Text = "Enter" };
+            button = new Button { Text = "Query" };
             button.Clicked += OnClicked;
 
             result = new List<Location>();
             listView = new ListView();
+            listView.BackgroundColor = Color.WhiteSmoke;
+            listView.Margin = new Thickness(5, 0, 5, 0);
             listView.ItemsSource = result;
 
-            StackLayout topLevel = new StackLayout {
-                Padding = new Thickness(0, 40, 0, 0),
-                BackgroundColor = Color.LightGray};
+            StackLayout topLevel = new StackLayout
+            {
+                Padding = new Thickness(10, 55, 10, 0),
+                BackgroundColor = Color.WhiteSmoke
+            };
             topLevel.Children.Add(amountLabel);
             topLevel.Children.Add(amountEntry);
             topLevel.Children.Add(cityLabel);
@@ -69,7 +85,7 @@ namespace USTaxes
         {
             string selectedOption = (string)queryPicker.SelectedItem;
             result = new List<Location>();
-            if (selectedOption == "amount")
+            if (selectedOption == "Zip codes with equivalent return")
             {
                 try
                 {
@@ -78,7 +94,8 @@ namespace USTaxes
                     {
                         readFile = ReadFileAmount("zipcodes.tsv", amount);
                         ConfigureListView();
-                    } else
+                    }
+                    else
                     {
                         amountEntry.Text = "Please enter a valid dollar amount";
                     }
@@ -88,7 +105,7 @@ namespace USTaxes
                     amountEntry.Text = "Please enter a valid dollar amount";
                 }
             }
-            else if (selectedOption == "city state")
+            else if (selectedOption == "Zip codes in city-state")
             {
                 try
                 {
@@ -197,6 +214,7 @@ namespace USTaxes
                 // Create views with bindings for displaying each property.v
                 Label zipCode = new Label();
                 zipCode.SetBinding(Label.TextProperty, "zipCode");
+                zipCode.FontAttributes = FontAttributes.Bold;
                 zipCode.FontSize = 16;
 
                 Label city = new Label();
@@ -248,5 +266,4 @@ namespace USTaxes
         }
     }
 }
-
 
