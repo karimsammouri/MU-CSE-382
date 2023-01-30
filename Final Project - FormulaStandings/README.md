@@ -24,7 +24,7 @@
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/DriverPage.png">
 
 <h2>Constructor Standings</h2>
-<p>Second page of a two-paged carousel <b>Standings</b> tab.Displays constructor standings for the current season. User can click on a specific constructor to see more details.</p>
+<p>Second page of a two-paged carousel <b>Standings</b> tab. Displays constructor standings for the current season. User can click on a specific constructor to see more details.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/ConstructorsPage.png">
 
 <h2>Constructor Page</h2>
