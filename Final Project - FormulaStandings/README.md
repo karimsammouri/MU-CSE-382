@@ -1,12 +1,7 @@
 <h1>FormulaStandings</h1>
 
 <p>A Formula One® Companion Mobile App</p>
-<p>The following images are for the 2022 Formula One® season. The app automatically displays the latest season.</p>
-<p>Built using C#, XAML, and Microsoft's Xamarin.Forms framework.</p>
-<p>App calls on the Ergast Developer API for Formula One® race, driver, and constructor data.</p>
-<p>Abiding by the terms and conditions of the Ergast web service, this project is intended for personal, non-commercial purposes.</p>
-<p>App fulfills the final project requirements of Miami University's CSE 382: Mobile Application Development for the Fall of 2022.</p>
-<p>Project, excluding the Ergast web service, is wholly designed and implemented by Karim Sammouri with all rights reserved.</p>
+<p>App is built using C#, XAML, and Microsoft's Xamarin.Forms framework. It calls on the Ergast Developer API for the latest Formula One® race, driver, and constructor data. Abiding by the terms and conditions of the Ergast web service, this project is intended for personal, non-commercial purposes. It fulfills the final project requirements of Miami University's CSE 382: Mobile Application Development for the Fall of 2022. This project, excluding the Ergast web service, is wholly designed and implemented by Karim Sammouri with all rights reserved. The following images are for the 2022 Formula One® season.</p>
 
 <h2>Splash Screen</h2>
 <img width="300" alt="Figure 1" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/SplashPage.png">
