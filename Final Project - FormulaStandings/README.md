@@ -1,6 +1,6 @@
 <h1>FormulaStandings</h1>
 
-<h2>A Formula One® Companion Mobile App</h2>
+<p>A Formula One® Companion Mobile App</p>
 
 <img width="300" alt="Figure 1" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/SplashPage.png">
 
