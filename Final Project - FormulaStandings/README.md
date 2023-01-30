@@ -8,7 +8,7 @@
 <img width="300" alt="Figure 1" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/SplashPage.png">
 
 <h2>Races Tab</h2>
-<p>Landing page and first tab. Displays race schedule of the current season. User can click on a specific race to see more details. Schedule updates automatically based on the season.</p>
+<p>Landing page and first tab. Displays race schedule of the current season. User can click on a specific race to see more details. Schedule updates automatically based on the Formula One® season.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/RacesPage.png">
 
 <h2>Race Page</h2>
