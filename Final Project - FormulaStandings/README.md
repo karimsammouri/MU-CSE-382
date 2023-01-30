@@ -1,4 +1,4 @@
-<h1 align="center">FormulaStandings</h1>
+<h1>FormulaStandings</h1>
 
 <img width="300" alt="Figure 1" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/SplashPage.png">
 
