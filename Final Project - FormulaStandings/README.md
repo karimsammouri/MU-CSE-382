@@ -32,7 +32,7 @@
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/ConstructorPage.png">
 
 <h2>News Page</h2>
-<p>Third tab. Displays a WebView of Formula One's official news page.</p>
+<p>Third tab. Displays a <i>WebView</i> of Formula One's official news page.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/NewsPage.png">
 
 <h2>Settings Page</h2>
