@@ -19,7 +19,7 @@
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/DriversPage.png">
 
 <h2>Driver Page</h2>
-<p>Displays additional driver info. User is directed to the driver's Wikipedia page upon clicking "Learn More".</p>
+<p>Displays additional driver information. User is directed to the driver's Wikipedia page upon clicking <i>Learn More<i>.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/DriverPage.png">
 
 <h2>Constructor Standings</h2>
