@@ -108,7 +108,7 @@
 
         <Button Text="C" Grid.Row="1" Grid.Column="4" Clicked="Button_Clicked" Style="{StaticResource ClearKey}"/>
 
-        <Frame Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4" Style="{StaticResource InvestmentFrame}">
+        <Frame Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4" HasShadow="False" Style="{StaticResource InvestmentFrame}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
