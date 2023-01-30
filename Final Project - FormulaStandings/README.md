@@ -2,7 +2,7 @@
 
 <h3>A Formula One® Companion Mobile App</h3>
 
-<p>Built using C#, XAML, and Microsoft's Xamarin.Forms framework. Makes use of a local database, <i>ListViews</i>, and user preferences. Calls on the Ergast Developer API web service for the latest Formula One® race, driver, and constructor data. Abiding by the terms and conditions of the Ergast web service, this project is intended for personal, non-commercial purposes. It fulfills the final project requirements of Miami University's CSE 382: Mobile Application Development for the Fall of 2022. This project, excluding the Ergast web service, is wholly designed and implemented by me with all rights reserved. The following samples are based on the Xcode iPhone 14 (iOS 16.2) Simulator and the 2022 Formula One® season.</p>
+<p>Built using C#, XAML, and Microsoft's Xamarin.Forms framework. Makes use of a local database, <i>ListViews</i>, and user preferences. Calls on the Ergast Developer API web service for the latest Formula One® race, driver, and constructor data. Abiding by the terms and conditions of the Ergast web service, this project is intended for personal, non-commercial purposes. It fulfills the final project requirements of Miami University's CSE 382: Mobile Application Development for the Fall of 2022. This project, excluding the Ergast web service, is wholly designed and implemented by me with all rights reserved. The following samples are based on the Xcode iPhone 14 (iOS 16.2) simulator and the 2022 Formula One® season.</p>
 
 <h2>Splash Screen</h2>
 <img width="300" alt="Figure 1" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/SplashPage.png">
