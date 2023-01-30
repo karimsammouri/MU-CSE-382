@@ -20,7 +20,7 @@
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/DriversPage.png">
 
 <h2>Driver Page</h2>
-<p>Shows up after user clicks on a specific driver. Displays additional driver information. User is directed to the driver's Wikipedia page upon clicking <b>Learn More<b>.</p>
+<p>Shows up after user clicks on a specific driver. Displays additional driver information. User is directed to the driver's Wikipedia page upon clicking <b>Learn More</b>.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/DriverPage.png">
 
 <h2>Constructor Standings</h2>
@@ -28,7 +28,7 @@
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/ConstructorsPage.png">
 
 <h2>Constructor Page</h2>
-<p>Shows up after user clicks on a specific constructor. Displays additional constructor info. User is directed to the constructor's Wikipedia page upon clicking "Learn More".</p>
+<p>Shows up after user clicks on a specific constructor. Displays additional constructor info. User is directed to the constructor's Wikipedia page upon clicking <b>Learn More</b>.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/ConstructorPage.png">
 
 <h2>News Page</h2>
