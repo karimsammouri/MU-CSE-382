@@ -7,9 +7,11 @@
 <img width="300" alt="Figure 1" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/SplashPage.png">
 
 <h2>Race Schedule</h2>
+<p>User can click on a specific race to see more details.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/RacesPage.png">
 
 <h2>Race Page</h2>
+<p>Displays driver and constructor race finishes. User can click on a specific driver to see more details.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/RacePage.png">
 
 <h2>Driver Standings</h2>
