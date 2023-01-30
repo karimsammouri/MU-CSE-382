@@ -36,6 +36,6 @@
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/NewsPage.png">
 
 <h2>Settings Page</h2>
-<p>Fourth tab. Displays settings and support links. Users can toggle and adjust the volume of the background official Formula One® theme song.</p>
+<p>Fourth and last tab. Displays settings and support links. Users can toggle and adjust the volume of the background official Formula One® theme song.</p>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Final%20Project%20-%20FormulaStandings/Screenshots/SettingsPage.png">
 
