@@ -9,7 +9,7 @@
 <h2>Query Types</h2>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Project02%20-%20US%20Tax%20Information/Screenshots/QueryTypes.png">
 
-<h2>Sample Query Result: Zip Codes by Amount</h2>
+<h2>Sample Query Result: Zip Codes by Average Tax Return</h2>
 <img width="300" src="https://github.com/karimsammouri/MU-CSE-382/blob/main/Project02%20-%20US%20Tax%20Information/Screenshots/Query1Result.png">
 
 <h2>Sample Query Result: Zip Codes by City-State</h2>
